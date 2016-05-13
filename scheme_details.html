@@ -9,8 +9,8 @@
   <link rel="stylesheet" type="text/css" href="css/homepage.css">
 </head> 
 <body ng-app="MyApp" ng-controller="AppCtrl" ng-cloak >
-  <div ng-controller="BasicDemoCtrl as ctrl"  id="popupContainer">
-  <div class="header" >
+  <div   id="popupContainer">
+  <div class="header" ng-controller="BasicDemoCtrl as ctrl">
     <md-toolbar>
       <div class="desktop_tabs">
         <div layout class="md-toolbar-tools" layout layout-align="space-between center">
@@ -30,7 +30,6 @@
                           {{x.name}}
                         </md-button>
                       </md-menu-item>
-                      
                     </md-menu-content>
                   </md-menu>
                 </div>
