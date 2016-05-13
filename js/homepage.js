@@ -45,11 +45,14 @@ angular
 	    })
   	};
     }]);
-		function DialogController($scope, $mdDialog) {
-		  $scope.cancel = function() {
-		    $mdDialog.cancel();
-		  };
-		}
-		function search_header() {
-  		window.location = "search_results.html";
+	function DialogController($scope, $mdDialog) {
+	  $scope.cancel = function() {
+	    $mdDialog.cancel();
+	  };
+	}
+	function search_header() {
+		window.location = "search_results.html";
   	}
+    angular.element(document).ready(function() {
+      angular.bootstrap(document, ['MyApp']);
+    });
