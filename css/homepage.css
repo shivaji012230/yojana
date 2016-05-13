@@ -158,6 +158,9 @@
       .width_24 {
         width: 24px;
       }
+      a.hvr_clr:hover {
+        color: inherit;
+      }
       @media all and (max-width: 599px) {
         .mobile {
           display:block;
