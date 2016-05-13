@@ -1,14 +1,15 @@
 angular
     .module('MyApp', ['ngMaterial'])
-    .controller('BasicDemoCtrl', function DemoCtrl($scope) {
+
+    .controller('BasicDemoCtrl',['$scope', function DemoCtrl($scope) {
       var originatorEv;
       $scope.schemes = [{name:'Scheme1'},{name:'Scheme2'},{name:'Scheme3'},{name:'Scheme4'},{name:'Scheme5'},{name:'Scheme6'}];
       this.openMenu = function($mdOpenMenu, ev) {
         originatorEv = ev;
         $mdOpenMenu(ev);
       };
+    }])
 
-    })
     .controller('AppCtrl', ['$scope', '$mdDialog', function($scope,$mdDialog) {
     $scope.showInMobile = true;
     //$scope.imagePath = 'images1.jpg';
