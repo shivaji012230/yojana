@@ -1,0 +1,276 @@
+<html lang="en" >
+<head>
+  <title>Scheme Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheets -->
+  <link rel="stylesheet" href="css/angular-material.min.css">
+  <link href="css/material_icons.css" rel="stylesheet">
+  <!-- My style sheets -->
+  <link rel="stylesheet" type="text/css" href="css/homepage.css">
+</head> 
+<body ng-app="MyApp" ng-controller="AppCtrl" ng-cloak >
+  <div ng-controller="BasicDemoCtrl as ctrl"  id="popupContainer">
+  <div class="header" >
+    <md-toolbar>
+      <div class="desktop_tabs">
+        <div layout class="md-toolbar-tools" layout layout-align="space-between center">
+          <div layout  class="logo" >
+            <h2>YojanaLogo</h2>
+          </div>
+          <div  layout layout-align="start center" class="nested1" flex="50" flex-sm="40">
+            <div class="md-menu-demo menudemoBasicUsage"  >
+                <div class="menu-demo-container" layout="column" layout-align="center center">
+                  <md-menu>
+                    <md-button class="md-icon-button bttn_menu" aria-label="Open phone interactions menu" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+                      <img src="images/menu.png" class="width_24">
+                    </md-button>
+                    <md-menu-content width="2" >
+                      <md-menu-item ng-repeat="x in schemes">
+                        <md-button >
+                          {{x.name}}
+                        </md-button>
+                      </md-menu-item>
+                      
+                    </md-menu-content>
+                  </md-menu>
+                </div>
+              </div>
+            <input type="search" placeholder="Search for Schemes" class="text_input" onsearch="search_header()">
+            <md-button class="md-icon-button" aria-label="Search" onclick="search_header()">
+              <md-tooltip>Search</md-tooltip> 
+              <md-icon class="material-icons"><img src="images/search.png" class="width_24"></md-icon>
+            </md-button>
+          </div>
+          <div layout  layout-align="end center" >
+            <md-button class="md-icon-button img_social" aria-label="" hide show-gt-sm>
+              <img src="images/facebook1.png" class="width_100">
+            </md-button>
+            <md-button class="md-icon-button img_social" aria-label="" hide show-gt-sm>
+              <img src="images/twitter.png" class="width_100">
+            </md-button>
+            <md-button ng-href="" class="anc" hide show-gt-sm>About us</md-button>
+            <md-button class="bttn_header" ng-click="showAdvanced($event)" >Login</md-button>
+            <div class="md-menu-demo menudemoBasicUsage"  hide-gt-sm>
+              <div class="menu-demo-container" layout="column" layout-align="center center">
+                <md-menu>
+                  <md-button class="md-icon-button" aria-label="Open phone interactions menu" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+                    <img src="images/more.png" class="width_24">
+                  </md-button>
+                  <md-menu-content width="2">
+                    <md-menu-item hide-gt-sm>
+                      <md-button >
+                        <md-icon  md-menu-align-target="">
+                          <img src="images/Y-icon.png" class="images_more">
+                        </md-icon>
+                        About Us
+                      </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                      <md-button>
+                        <md-icon  md-menu-align-target="">
+                        <img src="images/facebook1.png" class="images_more">
+                        </md-icon>
+                        Facebook
+                      </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                      <md-button >
+                        <md-icon  md-menu-align-target="">
+                        <img src="images/twitter.png" class="images_more">
+                        </md-icon>
+                        Twitter
+                      </md-button>
+                    </md-menu-item>
+                  </md-menu-content>
+                </md-menu>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="mobile">
+        <div  layout  ng-show="showInMobile" layout-align="space-between center">
+          <div layout class="md-toolbar-tools" layout layout-align="start center" flex>
+            <div  layout layout="start center" flex>
+              <div layout>
+                <h2 class="logo1">YojanaLogo</h2>
+              </div>
+            </div>
+            <div layout flex-offset-xs="5"  layout-align="end center">
+              <md-button class="md-icon-button " aria-label="Search"  ng-click="showInMobile = false">
+                <md-tooltip>Search</md-tooltip>
+                <md-icon class="material-icons"><img src="images/search.png" class="width_24"></md-icon>
+              </md-button>
+              <md-button ng-href="" class="anc anc1" hide-xs>About us</md-button>
+              <md-button class="bttn_header" ng-click="showAdvanced($event)" >Login</md-button>
+              <div class="md-menu-demo menudemoBasicUsage" >
+                <div class="menu-demo-container" layout="column" layout-align="center center">
+                  <md-menu>
+                    <md-button class="md-icon-button" aria-label="Open phone interactions menu" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+                      <img src="images/more.png" class="width_24">
+                    </md-button>
+                    <md-menu-content width="2">
+                    <md-menu-item hide-gt-sm>
+                      <md-button >
+                        <md-icon  md-menu-align-target="">
+                          <img src="images/Y-icon.png" class="images_more">
+                        </md-icon>
+                        About Us
+                      </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                      <md-button>
+                        <md-icon>
+                          <img src="images/facebook1.png" class="images_more">
+                        </md-icon>
+                        Facebook
+                      </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                      <md-button >
+                        <md-icon>
+                          <img src="images/twitter.png" class="images_more">
+                        </md-icon>
+                        Twitter
+                      </md-button>
+                    </md-menu-item>
+                  </md-menu-content>
+                  </md-menu>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md-toolbar-tools" ng-hide="showInMobile"  >
+          <md-button class="md-icon-button" aria-label="Back" ng-click="showInMobile = true">
+            <md-tooltip>Back</md-tooltip>
+            <md-icon class="material-icons"><img src="images/arrow_back.png" class="width_24"></md-icon>
+          </md-button>
+          <div class="md-menu-demo menudemoBasicUsage"  >
+            <div class="menu-demo-container" layout="column" layout-align="center center">
+              <md-menu>
+                <md-button class="md-icon-button fltr_mini_search" aria-label="Open phone interactions menu" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+                  <img src="images/menu.png" class="width_24">
+                </md-button>
+                <md-menu-content width="2" >
+                  <md-menu-item ng-repeat="x in schemes">
+                    <md-button >
+                      {{x.name}}
+                    </md-button>
+                  </md-menu-item>
+                  
+                </md-menu-content>
+              </md-menu>
+            </div>
+          </div>
+          <md-input-container md-no-float class="md-accent width_100" >
+            <input type="search" placeholder="Search here" class="dcf" onsearch="search_header()">
+          </md-input-container>
+          <md-button class="md-icon-button search1" aria-label="Search" onclick="search_header()">
+            <md-tooltip>Search</md-tooltip>
+            <md-icon class="material-icons"><img src="images/search.png" class="width_24"></md-icon>
+          </md-button>
+        </div>
+      </div>
+    </md-toolbar>
+  </div>
+  <div class="body">
+  	<md-content layout="column" >
+      <div class="boxes_inner2 " flex="100" flex-xs="50" layout="column" layout-align="center center">
+      	<div layout="column" layout-align="center center" layout-xs="column">
+        	<div class="img_text">
+            <h1>Scheme Title</h1>
+            <h4>The titles of Washed Out's breakthrough song and the first single from Paracosm share</h4>
+            <h4> the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...</h4>
+          </div>
+      	</div>
+      </div>
+      <div ng-repeat="x in names" class="md-padding width_100" layout="column">
+        <h2 class="hd_2">{{x.name1}}</h2>
+      	<div layout layout-sm="column" layout-xs="column" layout-align-sm="center center" layout-align-xs="center center" >
+        	<div ng-repeat="y in x.name2" layout="row" layout-xs="column" >
+            <a href="" class="styl_anchr">
+              <md-card>
+                <img ng-src="{{y['src']}}" class="md-card-image stl_img" alt="Washed Out" >
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">{{y['title']}}</span>
+                    <span class="md-subhead subhd">{{y['subhead']}}</span>
+                  </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                  <p class="supprt_txt">
+                    {{y['dsc']}}
+                  </p>
+                </md-card-content>
+              </md-card>
+            </a>
+          </div>
+      	</div>
+      </div>
+  	</md-content>  
+  </div>
+  <div class="footer">
+  	<md-toolbar>
+      <div class="md-toolbar-tools" layout layout-align="center center">
+        <h2>Footer</h2>
+        
+      </div>
+    </md-toolbar>
+  </div>
+  <script type="text/ng-template" id="dialog1.tmpl.html">
+    <md-dialog aria-label="Mango (Fruit)" flex="50"  >
+      <form>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <h2 >LOGIN</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+              <md-icon class="md-default-theme" class="material-icons"><img src="images/close.png" class="width_24"></md-icon>
+            </md-button>
+          </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+          <div class="md-dialog-content">
+            
+            <form>
+              <md-input-container class="md-block"  flex-gt-sm>
+                <label class="fnt_label">First Name</label>
+                <input type="text" md-autofocus ng-required="true">
+              </md-input-container>
+              <md-input-container class="md-block"  flex-gt-sm>
+                <label class="fnt_label">Password</label>
+                <input type="password" ng-required="true">
+              </md-input-container>Password
+          </form>
+          </div>
+        </md-dialog-content>
+      
+        <md-dialog-actions layout="row" layout-align="center center">
+          <md-button  class="md-raised md-primary" >
+            submit
+          </md-button>
+          <p>&nbsp;or&nbsp;</p>
+          <a href="#">New User Registration</a>
+        </md-dialog-actions>
+      </form>
+  </md-dialog>
+</script>
+</div>
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/angular-aria.min.js"></script>
+  <script src="js/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="js/angular-material.min.js"></script>
+  
+  <!-- Your application bootstrap  -->
+  <script src="js/scheme_details.js"></script>
+  
+</body>
+</html>
+
