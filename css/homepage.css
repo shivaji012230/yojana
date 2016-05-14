@@ -102,8 +102,8 @@
         font-size: 0.96em;
       }
       .stl_img {
-        max-height: 30%;
-        min-height:10%;
+        max-height: 200px;
+        min-height: 200px;
         max-width: 100%;
         min-width: 100%
       }
