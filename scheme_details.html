@@ -9,7 +9,7 @@
 
   <!-- My style sheets -->
   <link rel="stylesheet" type="text/css" href="css/homepage.css">
-  
+
   <!-- Angular Material requires Angular.js Libraries -->
   <script src="js/angular.min.js"></script>
   <script src="js/angular-animate.min.js"></script>
@@ -231,44 +231,40 @@
     </md-toolbar>
   </div>
   <script type="text/ng-template" id="dialog1.tmpl.html">
-    <md-dialog aria-label="Mango (Fruit)" flex="50"  >
-      <form>
-        <md-toolbar>
-          <div class="md-toolbar-tools">
-            <h2 >LOGIN</h2>
-            <span flex></span>
-            <md-button class="md-icon-button" ng-click="cancel()">
-              <md-icon class="md-default-theme" class="material-icons"><img src="images/close.png" class="width_24"></md-icon>
+    <md-dialog aria-label="lgnForm"  layout="column" style="width: 500px;">
+      <div class="md-toolbar-tools">
+        <h2 >LOGIN</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon class="md-default-theme" class="material-icons"><img src="images/close_black.png" class="width_24"></md-icon>
+        </md-button>
+      </div>
+      <md-dialog-content >
+        <div class="md-dialog-content md-padding"  layout="column" >
+          <form >
+            <md-input-container class="md-block"  >
+              <label class="fnt_label">User Name</label>
+              <input type="text" md-autofocus ng-required="true">
+            </md-input-container>
+            <md-input-container class="md-block"  >
+              <label class="fnt_label">Password</label>
+              <input type="password" ng-required="true">
+            </md-input-container>
+            <md-button  class="md-raised md-primary" flex-offset="40" flex-offset-xs="25">
+              submit
             </md-button>
-          </div>
-        </md-toolbar>
-
-        <md-dialog-content>
-          <div class="md-dialog-content">
-            
-            <form>
-              <md-input-container class="md-block"  flex-gt-sm>
-                <label class="fnt_label">First Name</label>
-                <input type="text" md-autofocus ng-required="true">
-              </md-input-container>
-              <md-input-container class="md-block"  flex-gt-sm>
-                <label class="fnt_label">Password</label>
-                <input type="password" ng-required="true">
-              </md-input-container>Password
           </form>
-          </div>
-        </md-dialog-content>
-      
-        <md-dialog-actions layout="row" layout-align="center center">
-          <md-button  class="md-raised md-primary" >
-            submit
-          </md-button>
+          <div layout="column" layout-align="center center">
           <p>&nbsp;or&nbsp;</p>
           <a href="#">New User Registration</a>
-        </md-dialog-actions>
-      </form>
-  </md-dialog>
-</script>
+          </div>
+        </div>
+      </md-dialog-content>
+      <md-dialog-actions layout="row" layout-align="center center">
+        
+      </md-dialog-actions>
+    </md-dialog>
+  </script>
 </div>
   
   <!-- Your application bootstrap  -->
