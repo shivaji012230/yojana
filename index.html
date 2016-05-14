@@ -2,11 +2,15 @@
 <head>
   <title>Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Angular Material style sheets -->
   <link rel="stylesheet" href="css/angular-material.min.css">
   <link href="css/material_icons.css" rel="stylesheet">
+
   <!-- My style sheets -->
   <link rel="stylesheet" type="text/css" href="css/homepage.css">
+  
+  <!-- Angular Material requires Angular.js Libraries -->
   <script src="js/angular.min.js"></script>
   <script src="js/angular-animate.min.js"></script>
   <script src="js/angular-aria.min.js"></script>
@@ -14,6 +18,8 @@
 
   <!-- Angular Material Library -->
   <script src="js/angular-material.min.js"></script>
+
+</head>  
 <body  ng-controller="AppCtrl" >
   <div  id="popupContainer">
   <div class="header" ng-controller="BasicDemoCtrl as ctrl">
@@ -180,7 +186,7 @@
   </div>
   <div class="body">
   	<md-content layout="column">
-        <div ng-repeat="x in names" class="md-padding width_100" layout="column">
+        <div ng-repeat="x in names" class="md-padding " layout="column">
         	<h2 class="hd_2">{{x.name1}}</h2>
         	<div layout layout-sm="column" layout-xs="column" layout-align-sm="center center" layout-align-xs="center center">
 	        	<div ng-repeat="y in x.name2" class="" layout="column" layout-xs="row" >
@@ -249,15 +255,6 @@
 	</md-dialog>
 </script>
 </div>
-  <!-- Angular Material requires Angular.js Libraries -->
-  <script src="js/angular.min.js"></script>
-  <script src="js/angular-animate.min.js"></script>
-  <script src="js/angular-aria.min.js"></script>
-  <script src="js/angular-messages.min.js"></script>
-
-  <!-- Angular Material Library -->
-  <script src="js/angular-material.min.js"></script>
-  
   <!-- Your application bootstrap  -->
   <script src="js/homepage.js"></script>
 </body>

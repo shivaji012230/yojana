@@ -2,11 +2,23 @@
 <head>
   <title>Scheme Details</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Angular Material style sheets -->
   <link rel="stylesheet" href="css/angular-material.min.css">
   <link href="css/material_icons.css" rel="stylesheet">
+
   <!-- My style sheets -->
   <link rel="stylesheet" type="text/css" href="css/homepage.css">
+  
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/angular-aria.min.js"></script>
+  <script src="js/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="js/angular-material.min.js"></script>
+  
 </head> 
 <body ng-app="MyApp" ng-controller="AppCtrl" ng-cloak >
   <div   id="popupContainer">
@@ -176,9 +188,9 @@
   </div>
   <div class="body">
   	<md-content layout="column" >
-      <div class="boxes_inner2 " flex="100" flex-xs="50" layout="column" layout-align="center center">
-      	<div layout="column" layout-align="center center" layout-xs="column">
-        	<div class="img_text">
+      <div class="boxes_inner2 scheme_full_img_div"  flex-xs="50" layout="column" layout-align="center stretch" >
+      	<div layout="column" layout-align="center center" layout-xs="column" >
+        	<div class="img_text"> 
             <h1>Scheme Title</h1>
             <h4>The titles of Washed Out's breakthrough song and the first single from Paracosm share</h4>
             <h4> the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...</h4>
@@ -258,14 +270,6 @@
   </md-dialog>
 </script>
 </div>
-  <!-- Angular Material requires Angular.js Libraries -->
-  <script src="js/angular.min.js"></script>
-  <script src="js/angular-animate.min.js"></script>
-  <script src="js/angular-aria.min.js"></script>
-  <script src="js/angular-messages.min.js"></script>
-
-  <!-- Angular Material Library -->
-  <script src="js/angular-material.min.js"></script>
   
   <!-- Your application bootstrap  -->
   <script src="js/scheme_details.js"></script>

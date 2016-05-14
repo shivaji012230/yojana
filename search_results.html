@@ -2,14 +2,23 @@
 <head>
   <title>Scheme Results</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <!-- Angular Material style sheets -->
   <link rel="stylesheet" href="css/angular-material.min.css">
   <link href="css/material_icons.css" rel="stylesheet">
+
   <!-- My style sheets -->
   <link rel="stylesheet" type="text/css" href="css/homepage.css">
-  <style type="text/css">
-  		
-  </style>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/angular-aria.min.js"></script>
+  <script src="js/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="js/angular-material.min.js"></script>
+</head>
 <body ng-app="MyApp" ng-controller="AppCtrl" ng-cloak >
   <div   id="popupContainer">
     <div class="header" ng-controller="BasicDemoCtrl as ctrl">
@@ -146,7 +155,7 @@
               </div>
             </div>
           </div>
-          <div class="md-toolbar-tools" ng-hide="showInMobile"  >
+          <div class="md-toolbar-tools" ng-hide="showInMobile">
             <md-button class="md-icon-button" aria-label="Back" ng-click="showInMobile = true">
               <md-tooltip>Back</md-tooltip>
               <md-icon class="material-icons"><img src="images/arrow_back.png" class="width_24"></md-icon>
@@ -312,14 +321,6 @@
       </md-dialog>
     </script>
   </div>
-  <!-- Angular Material requires Angular.js Libraries -->
-  <script src="js/angular.min.js"></script>
-  <script src="js/angular-animate.min.js"></script>
-  <script src="js/angular-aria.min.js"></script>
-  <script src="js/angular-messages.min.js"></script>
-
-  <!-- Angular Material Library -->
-  <script src="js/angular-material.min.js"></script>
   
   <!-- Your application bootstrap  -->
   <script src="js/scheme_results.js"></script>    
