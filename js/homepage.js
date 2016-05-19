@@ -1,5 +1,5 @@
-angular
-    .module('MyApp', ['ngMaterial'])
+var app = angular
+    .module('MyApp', ['ngMaterial','ngMessages'])
 
     .controller('BasicDemoCtrl',['$scope', function DemoCtrl($scope) {
       var originatorEv;
@@ -14,7 +14,7 @@ angular
     $scope.showInMobile = true;
     //$scope.imagePath = 'images1.jpg';
     
-    $scope.names =[ 
+    $scope.names = [ 
 
     {name1 : 'Related Schemes',
     name2:[{"src":"images/image1.jpg","title":"Scheme1","subhead":"subhead1","dsc":"The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well..."},
@@ -41,13 +41,13 @@ angular
     $scope.showAdvanced = function(ev) {
 	    $mdDialog.show({
 	      controller: DialogController,
-	      templateUrl: 'dialog1.tmpl.html',
+	      templateUrl: 'login_dialog.html',
 	      parent: angular.element(document.body),
 	      targetEvent: ev,
 	      clickOutsideToClose:true
 	    })
   	};
-    }]);
+   }]);
 	function DialogController($scope, $mdDialog) {
 	  $scope.cancel = function() {
 	    $mdDialog.cancel();
@@ -55,7 +55,5 @@ angular
 	}
 	function search_header() {
 		window.location = "search_results.html";
-  	}
-    angular.element(document).ready(function() {
-      angular.bootstrap(document, ['MyApp']);
-    });
+  }
+    
